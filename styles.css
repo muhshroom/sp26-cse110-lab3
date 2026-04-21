@@ -1,0 +1,133 @@
+/* Background */
+body { background-color: rgb(216, 242, 251); }
+
+/* Color, CSS Variables & Fallback */
+:root {
+    --main-color: #7c0661;
+    --accent: rgba(200, 100, 50, 0.472);
+    --fallback: var(--not-defined, purple);
+
+}
+
+header {
+    background-color: color(display-p3 0.1 0.6 0.9);
+    background-color: hsla(204, 100%, 66%, 0.365);
+}
+
+/* Units (6 totaLl) */
+img {
+    width: 50%;     /* relative */
+    padding: 1rem;  /* relative */
+    font-size: 1.2em; /* relative */
+
+    margin: 10px;   /* absolute */
+    border-width: 2px; /* absolute */
+    height: 4in;    /* absolute */
+}
+
+/* Box Model */
+/* Box Model - Long */
+section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-style: solid;
+    border-color: rgb(0, 24, 113);
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+/* Box Model - Short */
+header {
+    margin: 20px 30px 20px 30px;
+    padding: 15px 25px 15px 25px;
+    border: 3px dashed rgb(14, 51, 185);
+}
+
+
+/* Text */
+h1 {
+    text-align: left;
+    text-decoration: overline underline;
+}
+
+/* Display */
+li {
+    display: inline-block;
+}
+
+span {
+    display: inline;
+}
+
+hr {
+    display: block;
+}
+
+/* Sizing */
+video {
+    height: 5in;
+    width: 60%;
+    max-width: 800px;
+    min-width: 200px;
+}
+
+/* Position */
+footer {
+    position: relative;
+    top: 10px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+/* Pseudo-class */
+button:hover {
+    background-color: color-mix(in srgb, rgb(173, 209, 255) 50%, #b5ddfa 50%);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Layouts */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#attendance ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-color: lightgreen;
+  }
+
+  video {
+    width: 100%;
+  }
+}
+
+/* -----------CSS SELECTORS------------ */
